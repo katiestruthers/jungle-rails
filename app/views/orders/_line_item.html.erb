@@ -1,0 +1,16 @@
+<tr>
+  <td>
+    <%= image_tag product.image.thumb.url , alt: product.name %>
+    <h4><%= product.name %></h4>
+    <p><%= product.description %></p>
+  </td>
+  <td>
+    <%= "$#{product.price}" %>
+  </td>
+  <td>
+    <%= product.quantity %>
+  </td>
+  <td>
+    <%= "$#{product.price * product.quantity}" %>
+  </td>
+</tr>
