@@ -67,6 +67,13 @@
         <li class="nav-item">
           <%= link_to 'About', about_path, class: "nav-link" %>
         </li>
+        <li class="nav-item">
+          <% if current_user %>
+          Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+          <% else %>
+          <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
