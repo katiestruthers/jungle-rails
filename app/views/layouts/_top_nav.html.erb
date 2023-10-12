@@ -69,9 +69,17 @@
         </li>
         <li class="nav-item">
           <% if current_user %>
-          Signed in as <%= "#{current_user.first_name} #{current_user.last_name}" %> | <%= link_to "Logout", '/logout' %>
+            Signed in as <%= "#{current_user.first_name} #{current_user.last_name}" %>
+            <li class="nav-item">
+              <%= link_to "Logout", '/logout' %>
+            </li>
           <% else %>
-          <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+          <li class="nav-item">
+            <%= link_to 'Login', '/login', class: "nav-link" %> 
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Signup', '/signup', class: "nav-link" %>
+          </li>
           <% end %>
         </li>
       </ul>
