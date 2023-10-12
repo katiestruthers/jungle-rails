@@ -69,9 +69,11 @@
         </li>
         <li class="nav-item">
           <% if current_user %>
-            Signed in as <%= "#{current_user.first_name} #{current_user.last_name}" %>
+            <li class="nav-link">
+              <u>Signed in as <%= "#{current_user.first_name} #{current_user.last_name}" %></u>
+            </li>
             <li class="nav-item">
-              <%= link_to "Logout", '/logout' %>
+              <%= link_to "Logout", '/logout', class: "nav-link text-danger" %>
             </li>
           <% else %>
           <li class="nav-item">
