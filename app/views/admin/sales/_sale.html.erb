@@ -12,7 +12,15 @@
   </td>
 
   <td>
-    STATUS
+  <strong>
+    <% if sale.finished? %>
+      <span class="text-danger">Finished</span>
+    <% elsif sale.upcoming? %>
+      <span class="text-warning">Upcoming</span>
+    <% else %>
+      <span class="text-success">Active</span>
+    <% end %>
+  </strong>
   </td>
 
   <td>
